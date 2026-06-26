@@ -3,239 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roupa Nova - Tributo à Lenda do Pop Rock Nacional</title>
+    <title>Roupa Nova - Tributo à Banda</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Estilização Geral */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
             color: #333;
-            background-color: #f9f9f9;
         }
 
         header {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: #fff;
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            margin: 0;
+            font-size: 2.8em;
             letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.2rem;
-            color: #e94560;
-            font-weight: bold;
+            font-style: italic;
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
         nav {
-            background-color: #0f3460;
+            background-color: #222;
             text-align: center;
             padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            sticky: top;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: bold;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #e94560;
+            color: #ffd700;
         }
 
         .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
         }
 
         section {
-            background: #fff;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: #0f3460;
-            border-bottom: 3px solid #e94560;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .grid-integrantes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background: #f1f1f1;
-            padding: 15px;
-            text-align: center;
-            border-radius: 6px;
-            font-weight: bold;
-            color: #16213e;
-        }
-
-        .card span {
-            display: block;
-            font-weight: normal;
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        ul.sucessos {
-            list-style-type: none;
-        }
-
-        ul.sucessos li {
-            padding: 10px 0;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
             border-bottom: 1px solid #eee;
         }
 
-        ul.sucessos li::before {
-            content: "🎵 ";
+        section:last-child {
+            border-bottom: none;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: 0 auto;
+        h2 {
+            color: #1e3c72;
+            border-left: 5px solid #ffd700;
+            padding-left: 10px;
         }
 
-        label {
-            margin-top: 10px;
-            font-weight: 600;
+        /* Estilo da lista de integrantes */
+        .integrantes-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
 
-        input, textarea {
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        button {
-            margin-top: 20px;
-            padding: 12px;
-            background-color: #e94560;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
+        .integrantes-list li {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #2a5298;
             font-weight: bold;
-            transition: background 0.3s;
         }
 
-        button:hover {
-            background-color: #53354a;
+        /* Tabela de Sucessos */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1e3c72;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
         }
 
         footer {
-            background-color: #1a1a2e;
-            color: #fff;
             text-align: center;
             padding: 20px;
+            background-color: #222;
+            color: #fff;
+            font-size: 0.9em;
             margin-top: 40px;
-            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>ROUPA NOVA</h1>
-        <p>Mais de 40 anos de harmonia, sucessos e emoção</p>
+        <h1>Roupa Nova</h1>
+        <p>Mais de 40 anos de uma das maiores histórias da música brasileira.</p>
     </header>
 
     <nav>
-        <a href="#biografia">História</a>
+        <a href="#biografia">Biografia</a>
         <a href="#integrantes">Integrantes</a>
         <a href="#sucessos">Grandes Sucessos</a>
-        <a href="#faclube">Fã-Clube</a>
     </nav>
 
     <div class="container">
 
         <section id="biografia">
-            <h2>Quem Somos</h2>
-            <p>Fundada no Rio de Janeiro em 1980, o <strong>Roupa Nova</strong> é uma das bandas mais longevas e bem-sucedidas da história da música brasileira. Com um estilo que mistura pop, rock e MPB, o grupo ficou famoso por suas harmonias vocais impecáveis e por ser recordista em trilhas sonoras de novelas globais.</p>
-            <br>
-            <p>Atravessando gerações, a banda mantém sua essência e arrasta multidões por onde passa, sendo um símbolo de qualidade técnica e carisma no palco.</p>
+            <h2>Biografia</h2>
+            <p>Fundada no Rio de Janeiro em 1980, o <strong>Roupa Nova</strong> é uma das bandas mais longevas e bem-sucedidas do Brasil. Com um estilo que mescla o pop, o rock e a MPB, o grupo ficou famoso por suas harmonias vocais impecáveis e por emplacar dezenas de trilhas sonoras em novelas da TV Globo.</p>
+            <p>Ao longo de quatro décadas de carreira, a banda manteve praticamente a mesma formação original, conquistando prêmios importantes como o Grammy Latino e arrastando multidões em seus shows pelo país.</p>
         </section>
 
         <section id="integrantes">
             <h2>Integrantes</h2>
-            <p>Uma das marcas registradas da banda é a união: a formação original se manteve quase inalterada por décadas.</p>
-            
-            <div class="grid-integrantes">
-                <div class="card">Cleberson Horsth <span>Teclados e Vocal</span></div>
-                <div class="card">Ricardo Feghali <span>Teclados, Violão e Vocal</span></div>
-                <div class="card">Kiko <span>Guitarra, Violão e Vocal</span></div>
-                <div class="card">Nando <span>Baixo e Vocal</span></div>
-                <div class="card">Serginho Herval <span>Bateria e Vocal</span></div>
-                <div class="card">Fabio Nestares <span>Vocal e Percussão</span></div>
-            </div>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: #555;">* <em>In memoriam:</em> <strong>Paulinho</strong> (Vocal e Percussão), que nos deixou em 2020, mas permanece eterno na história da banda.</p>
+            <p>A força do Roupa Nova está na união e no talento individual de seus músicos:</p>
+            <ul class="integrantes-list">
+                <li>Cleberson Horsth <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Teclados e Vocal)</span></li>
+                <li>Ricardo Feghali <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Teclados, Guitarra e Vocal)</span></li>
+                <li>Kiko <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Guitarra, Violão e Vocal)</span></li>
+                <li>Nando <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Baixo e Vocal)</span></li>
+                <li>Serginho Herval <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Bateria e Vocal)</span></li>
+                <li>Fabio Nestares <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Vocal)</span></li>
+            </ul>
+            <p style="font-size: 0.9em; color: #666; italic: true; margin-top: 15px;">* Em memória eterna ao querido vocalista <strong>Paulinho</strong> (1952–2020).</p>
         </section>
 
         <section id="sucessos">
             <h2>Grandes Sucessos</h2>
-            <p>É quase impossível listar todas, mas aqui estão algumas das canções que se tornaram hinos nacionais:</p>
-            <br>
-            <ul class="sucessos">
-                <li><strong>Whisky a Go-Go</strong> - O tema indispensável de qualquer festa brasileira.</li>
-                <li><strong>Dona</strong> - Marcou a personagem Viúva Porcina na novela Roque Santeiro.</li>
-                <li><strong>Anjo</strong> - Uma das baladas mais emocionantes e cantadas pelo público.</li>
-                <li><strong>A Viagem</strong> - Tema de abertura da icônica novela homônima.</li>
-                <li><strong>Linda Demais</strong> - Um clássico absoluto dos anos 80.</li>
-            </ul>
-        </section>
-
-        <section id="faclube">
-            <h2>Inscreva-se no Fã-Clube</h2>
-            <p style="text-align: center; margin-bottom: 15px;">Receba novidades sobre shows, novos lançamentos e conteúdos exclusivos.</p>
+            <p>Confira algumas das canções mais marcantes que se tornaram hinos nacionais:</p>
             
-            <form action="#" method="POST" onsubmit="alert('Obrigado por se inscrever!'); return false;">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome aqui" required>
-
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
-
-                <label for="musica">Qual sua música favorita?</label>
-                <input type="text" id="musica" name="musica" placeholder="Ex: Whisky a Go-Go">
-
-                <button type="submit">Fazer Parte</button>
-            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Música</th>
+                        <th>Ano de Lançamento</th>
+                        <th>Nota / Curiosidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dona</strong></td>
+                        <td>1985</td>
+                        <td>Tema da viúva Porcina na novela Roque Santeiro.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Whisky a Go-Go</strong></td>
+                        <td>1984</td>
+                        <td>Um dos maiores hinos de festa do Brasil.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Linda Demais</strong></td>
+                        <td>1985</td>
+                        <td>Clássico romântico absoluto dos anos 80.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A Viagem</strong></td>
+                        <td>1994</td>
+                        <td>Tema de abertura da novela homônima.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Anjo</strong></td>
+                        <td>1983</td>
+                        <td>Uma das harmonias vocais mais bonitas da banda.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Página de Fã - Roupa Nova Tributo. Feito com ❤️ para os amantes da boa música.</p>
+        <p>&copy; 2026 - Página de Fã dedicada ao Roupa Nova. Feito com HTML e CSS.</p>
     </footer>
 
 </body>
