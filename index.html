@@ -38,7 +38,9 @@
             background-color: #222;
             text-align: center;
             padding: 10px 0;
-            sticky: top;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -77,6 +79,27 @@
             color: #1e3c72;
             border-left: 5px solid #ffd700;
             padding-left: 10px;
+        }
+
+        /* Container Responsivo para o Vídeo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* Estilo da lista de integrantes */
@@ -147,6 +170,11 @@
             <h2>Biografia</h2>
             <p>Fundada no Rio de Janeiro em 1980, o <strong>Roupa Nova</strong> é uma das bandas mais longevas e bem-sucedidas do Brasil. Com um estilo que mescla o pop, o rock e a MPB, o grupo ficou famoso por suas harmonias vocais impecáveis e por emplacar dezenas de trilhas sonoras em novelas da TV Globo.</p>
             <p>Ao longo de quatro décadas de carreira, a banda manteve praticamente a mesma formação original, conquistando prêmios importantes como o Grammy Latino e arrastando multidões em seus shows pelo país.</p>
+            
+            <h3>Assista ao Roupa Nova</h3>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/i7j0bw5TonI?si=49UmPb_DakQMmtXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
 
         <section id="integrantes">
@@ -160,7 +188,7 @@
                 <li>Serginho Herval <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Bateria e Vocal)</span></li>
                 <li>Fabio Nestares <span style="font-weight:normal; font-size:0.9em; color:#666;"><br>(Vocal)</span></li>
             </ul>
-            <p style="font-size: 0.9em; color: #666; italic: true; margin-top: 15px;">* Em memória eterna ao querido vocalista <strong>Paulinho</strong> (1952–2020).</p>
+            <p style="font-size: 0.9em; color: #666; font-style: italic; margin-top: 15px;">* Em memória eterna ao querido vocalista <strong>Paulinho</strong> (1952–2020).</p>
         </section>
 
         <section id="sucessos">
